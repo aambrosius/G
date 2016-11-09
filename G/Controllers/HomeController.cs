@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,6 +11,14 @@ namespace G.Controllers
     {
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Shop()
+        {
+            ViewBag.Title = "Pictures";
+            ViewBag.Message = "Look at your first pictures";
+            ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/images")).Select(fn => "~/images/" + Path.GetFileName(fn));
             return View();
         }
 

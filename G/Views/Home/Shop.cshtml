@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Shop";
+}
+
+<h2>Shop</h2>
+
+<div class="col-md-12">
+    <p>Check out these items!</p>
+    @foreach (var image in (IEnumerable<string>) ViewBag.Images) {
+        <img src="@Url.Content(image)" Height ="175" Width="150" alt="test"/>
+        //<p>"@Url.Content(image)"</p>
+        // <br/>
+    }
+</div>
