@@ -227,8 +227,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\Mario.jpg" />
-    <Content Include="Images\Dice.jpg" />
+    <Content Include="Images\SocialMedia\FacebookLogo.png" />
+    <Content Include="Images\SocialMedia\InstagramLogo.jpg" />
+    <Content Include="Images\BoutiqueHeader.png" />
+    <Content Include="Images\Shop\Mario.jpg" />
+    <Content Include="Images\Shop\Dice.jpg" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -240,6 +243,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Content\bootstrap-flex.min.css.map" />
     <Content Include="Content\bootstrap-flex.css.map" />
+    <Content Include="Images\SocialMedia\TwitterLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />

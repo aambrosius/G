@@ -2,29 +2,39 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Goretti's Boutique</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+<div class="col-md-11" style="background: rgba(245, 158, 156, 0.2); margin-bottom: 70px"  align="center">
+    <img src="~/Images/BoutiqueHeader.png" />
+    <p>Are you a member of Boutique? Register for your free account to get hot deals and the latest fashion insights.</p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Are you a member of Boutique? Register for your free account to get hot deals and the latest
+            fashion insights.
         </p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Styles</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p>
+            At Boutique it is easy to stay in style. Check out the hottest styles of the season.
+        </p>
+        <button>@Html.ActionLink("Shop Now!", "Shop", "Home")</button>
+
     </div>
     <div class="col-md-4">
-        <h2>Social Media</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Share The Great Deals</h2>
+        <p>Don't be selfish. Share the great deals on social media. Recieve cash back for everyone that you refer.</p>
+        <a class="socialMediaLink" href="http://facebook.com">
+            <img src="~/Images/SocialMedia/FacebookLogo.png" height="50" width="50" />
+        </a>
+        <a class="socialMediaLink" href="http://twitter.com">
+            <img src="~/Images/SocialMedia/TwitterLogo.png" height="50" width="50" />
+        </a>
+        <a class="socialMediaLink" href="http://instagram.com">
+            <img src="~/Images/SocialMedia/InstagramLogo.jpg" height="50" width="50" />
+        </a>
     </div>
 </div>

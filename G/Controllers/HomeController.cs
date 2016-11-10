@@ -18,7 +18,7 @@ namespace G.Controllers
         {
             ViewBag.Title = "Pictures";
             ViewBag.Message = "Look at your first pictures";
-            ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/images")).Select(fn => "~/images/" + Path.GetFileName(fn));
+            ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/Images/Shop")).Select(fn => "~/Images/Shop" + Path.GetFileName(fn));
             return View();
         }
 
