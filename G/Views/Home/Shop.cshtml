@@ -3,13 +3,32 @@
     ViewBag.Title = "Shop";
 }
 
-<h2>Shop</h2>
+<h2>@ViewBag.Title</h2>
 
-<div class="col-md-12">
-    <p>Check out these items!</p>
-    @foreach (var image in (IEnumerable<string>) ViewBag.Images) {
-        <img src="@Url.Content(image)" Height ="175" Width="150" alt="test"/>
-        //<p>"@Url.Content(image)"</p>
-        // <br/>
+<div class="row">
+    @foreach (var image in (IEnumerable<string>)ViewBag.Images)
+    {
+        <div class="col-md-4">
+            <button style="background: transparent; border-color: transparent">
+                <img src="@Url.Content(image)" Height="115" Width="100" alt="@image"/>
+            </button>
+        </div>
+        <div class="col-md-4">
+            <p>Look at @image</p>
+            <p>Qty: ?</p>
+            <p>Price: </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Quick Buy</h2>
+            <select>
+                <option value="extraSmall">Extra Small</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="extraLarge">Extra Large</option>
+            </select>
+            <br />
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Buy Now &raquo;</a></p>
+        </div>
     }
 </div>

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace G.Controllers
@@ -18,7 +15,7 @@ namespace G.Controllers
         {
             ViewBag.Title = "Pictures";
             ViewBag.Message = "Look at your first pictures";
-            ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/Images/Shop")).Select(fn => "~/Images/Shop" + Path.GetFileName(fn));
+            ViewBag.Images = Directory.EnumerateFiles(Server.MapPath("~/Images/Shop")).Select(fn => "~/Images/Shop/" + Path.GetFileName(fn));
             return View();
         }
 
