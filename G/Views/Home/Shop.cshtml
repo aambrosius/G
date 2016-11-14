@@ -6,19 +6,21 @@
 <h2>@ViewBag.Title</h2>
 
 <div class="row">
-    @foreach (var image in (IEnumerable<string>)ViewBag.Images)
+    @foreach (var item in ViewBag.ShopInfo)
     {
-        <div class="col-md-4">
+        <div class="col-md-2">
             <button style="background: transparent; border-color: transparent">
-                <img src="@Url.Content(image)" Height="115" Width="100" alt="@image"/>
+                <img src="@Url.Content(item.Image)" Height="135" Width="110" alt="@item.Image" />
             </button>
         </div>
-        <div class="col-md-4">
-            <p>Look at @image</p>
-            <p>Qty: ?</p>
-            <p>Price: </p>
+        <div class="col-md-8">
+            <h4>@item.Title</h4>
+            <p>@item.Description</p>
+            <p>Qty: @item.Quantity</p>            
+            <p>Price: @item.Price</p>
+
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
             <h2>Quick Buy</h2>
             <select>
                 <option value="extraSmall">Extra Small</option>
@@ -27,6 +29,12 @@
                 <option value="large">Large</option>
                 <option value="extraLarge">Extra Large</option>
             </select>
+            <select>
+                @for (int i = 0; i <= @item.Quantity; i++) {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <br/>
             <br />
             <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Buy Now &raquo;</a></p>
         </div>
